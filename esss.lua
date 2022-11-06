@@ -151,18 +151,12 @@ function ESP:Get_Tool(Player)
     end
     local Character = self:Get_Character(Player)
     if Character then
-        for i, Tool in pairs(Character:GetChildren()) do
-        local AcctualTool = Tool:FindFirstChild("ItemRoot")
-        if Tool:IsA("Model") then
-                
-        if Tool then
-            return Tool.Name
-            end
-        else
-        return "Hands"
+        local Tool = Character:FindFirstChildOfClass("Model")
+        if Tool:FindFirstChild("MeshPart") then
+            return Tool.Parent.Name
         end
     end
-   
+    return "Hands"
 end
 
 function ESP:Get_Health(Player)
