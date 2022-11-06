@@ -154,7 +154,8 @@ function ESP:Get_Tool(Player)
         for i, Tool in pairs(Character:GetChildren()) do
         
         local tooll = Tool:FindFirstChild("MeshPart")
-        
+        print(tooll)
+        print(Tool)
          if Tool:FindFirstChildOfClass("Model") and tooll.Name == "ItemRoot" then
                 return Tool.Parent.Name
         end
