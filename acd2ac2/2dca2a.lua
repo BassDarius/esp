@@ -551,6 +551,8 @@ do -- Player Metatable
                             Box.Color = Chams_Settings.Mode == "Visible" and Is_Visible and Color3.new(1, 0, 0) or Chams_Settings.Color
                             Name.Color = Chams_Settings.Mode == "Visible" and Is_Visible and Color3.new(1, 0, 0) or Chams_Settings.Color
                             Tool.Color = Chams_Settings.Mode == "Visible" and Is_Visible and Color3.new(1, 0, 0) or Chams_Settings.Color
+                            Name.OutlineColor = Chams_Settings.Mode == "Visible" and Is_Visible and Color3.new(1, 0, 0) or Chams_Settings.Color
+                            Tool.OutlineColor = Chams_Settings.Mode == "Visible" and Is_Visible and Color3.new(1, 0, 0) or Chams_Settings.Color
                             Chams.OutlineColor = Chams_Settings.OutlineColor
                             Chams.FillTransparency = Chams_Settings.Transparency
                             Chams.OutlineTransparency = Chams_Settings.OutlineTransparency
