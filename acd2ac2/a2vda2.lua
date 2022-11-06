@@ -548,7 +548,7 @@ do -- Player Metatable
                         Chams.Adornee = Chams_Enabled and Character or nil
                         if Chams_Enabled then
                             Chams.FillColor = Chams_Settings.Mode == "Visible" and Is_Visible and Color3.new(1, 0, 0) or Chams_Settings.Color
-                            Box.Color = Color3.new(1, 0, 0)
+                            Box.Color = Chams_Settings.Mode == "Visible" and Is_Visible and Color3.new(1, 0, 0) or Chams_Settings.Color
                             Chams.OutlineColor = Chams_Settings.OutlineColor
                             Chams.FillTransparency = Chams_Settings.Transparency
                             Chams.OutlineTransparency = Chams_Settings.OutlineTransparency
