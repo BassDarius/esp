@@ -153,7 +153,7 @@ function ESP:Get_Tool(Player)
     if Character then
         for i, Tool in pairs(Character:GetChildren()) do
         local AcctualTool = Tool:FindFirstChild("ItemRoot")
-        if Tool:IsA("Model") and AcctualTool then
+        if Tool:IsA("Model") then
                 
         if Tool then
             return Tool.Name
