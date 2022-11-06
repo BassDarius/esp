@@ -153,9 +153,7 @@ function ESP:Get_Tool(Player)
     if Character then
         for i, Tool in pairs(Character:GetChildren()) do
 
-        print(tooll)
-        print(Tool)
-         if Tool:IsA("Model") and Tool.Name == "ItemRoot" then
+         if Tool:IsA("Model") and Tool:FindFirstChild("ItemRoot") then
                 return Tool.Parent.Name
         end
             
