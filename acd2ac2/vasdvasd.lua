@@ -320,7 +320,7 @@ do -- Player Metatable
                 local x,y = math.floor(HRP_Position.X), math.floor(HRP_Position.Y);
                 local BoxPosX,BoxPosY = math.floor(x - w),math.floor(y - h * 0.5)
         ]]
-                local Box_Position = Framework:Round_V2(Vector2.new(X_Minimal - X_Maximal, Y_Minimal - Y_Maximal))
+                local Box_Position = Framework:Round_V2(Vector2.new(X - X_Maximal, Y - Y_Maximal))
                 local Good = false
 
                 if ESP.Settings.Team_Check then
