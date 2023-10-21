@@ -7,7 +7,6 @@
 --]]------------------------------------------------
 
   --// Locals
-  local ItemConfigs = game.ReplicatedStorage.ItemConfigs
   local Camera = game:GetService("Workspace").Camera
   local Camera = game:GetService("Workspace").CurrentCamera
   local Cam = game:GetService("Workspace").Camera
