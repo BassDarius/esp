@@ -314,11 +314,13 @@ do -- Player Metatable
                 end
 
                 local Box_Size = Framework:Round_V2(Vector2.new(X_Minimal - X_Maximal, Y_Minimal - Y_Maximal))
+        --[[     
                 local scale = 1 / (HRP_Position.Z * math.tan(math.rad(Camera.FieldOfView * 0.5)) * 2) * 100;
                 local w,h = math.floor(scale - 100), math.floor(60 * scale);
                 local x,y = math.floor(HRP_Position.X), math.floor(HRP_Position.Y);
                 local BoxPosX,BoxPosY = math.floor(x - w),math.floor(y - h * 0.5)
-                local Box_Position = Vector2.new(BoxPosX,BoxPosY)
+        ]]
+                local Box_Position = Framework:Round_V2(Vector2.new(X_Minimal - X_Maximal, Y_Minimal - Y_Maximal))
                 local Good = false
 
                 if ESP.Settings.Team_Check then
