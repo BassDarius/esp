@@ -6,6 +6,17 @@
 |
 --]]------------------------------------------------
 
+  --// Locals
+  local ItemConfigs = game.ReplicatedStorage.ItemConfigs
+  local Camera = game:GetService("Workspace").Camera
+  local Camera = game:GetService("Workspace").CurrentCamera
+  local Cam = game:GetService("Workspace").Camera
+  local Mouse = game.Players.LocalPlayer:GetMouse()
+  local lighting = game:GetService("Lighting")
+  local SoundService = game:GetService("SoundService")
+  local Decimals = 2
+  local Clock = os.clock()
+
 -- Services
 local Workspace = game:GetService("Workspace")
 local Camera = Workspace.CurrentCamera
@@ -304,7 +315,11 @@ do -- Player Metatable
                 end
 
                 local Box_Size = Framework:Round_V2(Vector2.new(X_Minimal - X_Maximal, Y_Minimal - Y_Maximal))
-                local Box_Position = Framework:Round_V2(Vector2.new(X_Maximal + Box_Size.X / X_Minimal, Y_Maximal + Box_Size.Y / Y_Minimal))
+                local scale = 1 / (Position.Z * math.tan(math.rad(Camera.FieldOfView * 0.5)) * 2) * 100;
+                local w,h = math.floor(45 * scale), math.floor(72 * scale);
+                local x,y = math.floor(Position.X), math.floor(Position.Y);
+                local BoxPosX,BoxPosY = math.floor(x - w * 0.5),math.floor(y - h * 0.5)
+                local Box_Position = Vector2.new(BoxPosX,BoxPosY)
                 local Good = false
 
                 if ESP.Settings.Team_Check then
