@@ -317,8 +317,8 @@ do -- Player Metatable
                 local scale = 1 / (HRP_Position.Z * math.tan(math.rad(Camera.FieldOfView * 0.5)) * 2) * 100;
                 local w,h = math.floor(45 * scale), math.floor(72 * scale);
                 local x,y = math.floor(HRP_Position.X), math.floor(HRP_Position.Y);
-                local BoxPosX,BoxPosY = math.floor(x - w * 0.5),math.floor(y - h * 1)
-                local Box_Position = Vector2.new(BoxPosX,BoxPosY)
+                local BoxPosX,BoxPosY = math.floor(x - w * 0.5),math.floor(y - h * 0)
+                local Box_Position = Vector2.new(BoxPosX/2,BoxPosY/2)
                 local Good = false
 
                 if ESP.Settings.Team_Check then
